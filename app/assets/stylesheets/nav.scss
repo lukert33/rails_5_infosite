@@ -23,3 +23,8 @@ $nav-content-height: 100px;
 		
 	}
 }
+
+.nav-buffer {
+	height: $nav-content-height;
+	background: transparent;
+}
