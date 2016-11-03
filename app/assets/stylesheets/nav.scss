@@ -1,4 +1,6 @@
-$nav-content-height: 100px;
+$nav-content-height-md: 100px;
+$nav-content-height-sm: 44px;
+
 
 .navbar {
 	font-size: 18px;
@@ -8,23 +10,32 @@ $nav-content-height: 100px;
 	@include display(flex);
 	@include align-items(center);
 	height: 100px;
+  @include media-sm {
+  	padding: 10px 0 0 10px;
+  	height: $nav-content-height-sm;
+  }
 }
 
 .nav-logo-img {
-	height: $nav-content-height - 20px;
+	height: $nav-content-height-md - 20px;
   width: auto;
+  @include media-sm {
+  	height: $nav-content-height-sm;
+  }
 }
 
 .nav-link-list {
 	@include media-md-lg {
-		height: $nav-content-height;
+		height: $nav-content-height-md;
 		@include display(flex);
-		@include align-items(center);	
-		
+		@include align-items(center);			
 	}
 }
 
 .nav-buffer {
-	height: $nav-content-height;
+	height: $nav-content-height-md;
 	background: transparent;
+	  @include media-sm {
+  	height: $nav-content-height-sm;
+  }
 }
