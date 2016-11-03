@@ -1,6 +1,12 @@
+//Vendor
+@import "bourbon";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 @import "bootstrap_paper";
+//End Vendor
 
+@import "mixins";
+
+@import "nav";
 @import "welcome";

@@ -1,0 +1,25 @@
+$nav-content-height: 100px;
+
+.navbar {
+	font-size: 18px;
+}
+
+.navbar-homelink {
+	@include display(flex);
+	@include align-items(center);
+	height: 100px;
+}
+
+.nav-logo-img {
+	height: $nav-content-height - 20px;
+  width: auto;
+}
+
+.nav-link-list {
+	@include media-md-lg {
+		height: $nav-content-height;
+		@include display(flex);
+		@include align-items(center);	
+		
+	}
+}
