@@ -1,0 +1,24 @@
+//Atlas normalize section
+figure {
+  margin: 0 0 0 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
+body {
+	font-family: $font-family-sans;
+	font-size: 18px;
+	color: #333;
+}
+
+@media (min-width: $screen-md-min) {
+  body {
+    min-width: $container-md;
+  }
+}
+
+p {
+	font-family: $font-family-serif;
+}
