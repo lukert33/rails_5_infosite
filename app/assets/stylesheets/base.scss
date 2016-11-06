@@ -22,3 +22,25 @@ body {
 p {
 	font-family: $font-family-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0 0;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+.title-lg {
+	font-size: 72px;
+	font-weight: 700;
+}
+
+.subtitle-lg {
+	font-family: $font-family-serif;
+	font-size: 28px;
+}
+
+.hero-content {
+	padding: 20px 0;
+}
