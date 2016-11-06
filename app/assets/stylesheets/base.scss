@@ -21,6 +21,16 @@ body {
 
 p {
 	font-family: $font-family-serif;
+	margin: 0 0 1.4em;
+	line-height: 1.4em;
+}
+
+a {
+	color: $color-blue;
+	&:hover, &:focus {
+		color: #333;
+		text-decoration: none;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {

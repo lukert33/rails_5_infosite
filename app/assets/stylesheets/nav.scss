@@ -42,6 +42,6 @@ $nav-content-height-sm: 44px;
 	height: $nav-content-height-md;
 	background: transparent;
 	  @include media-sm {
-  	height: $nav-content-height-sm;
+  	height: $nav-content-height-sm + 15px;
   }
 }

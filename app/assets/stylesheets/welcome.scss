@@ -11,3 +11,16 @@
 		color: #fff;
 	}
 }
+
+.hero-explanation {
+	background: #fff;
+	margin-top: 160px;
+	padding: 20px 40px;
+	p:last-child {
+		margin-bottom: 0;
+	}
+	@include media-sm {
+    margin-top: 10px;
+    padding: 20px 20px;
+	}
+}
