@@ -25,9 +25,14 @@ $nav-content-height-sm: 44px;
 .nav-logo-img {
 	height: $nav-content-height-md - 20px;
   width: auto;
+  margin-right: 10px;
   @include media-sm {
   	height: $nav-content-height-sm;
   }
+}
+
+.logo-title {
+  line-height: 1em;
 }
 
 .nav-link-list {

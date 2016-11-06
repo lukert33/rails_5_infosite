@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/research', to: 'welcome#research'
 
   get '/about-us', to: 'welcome#about_us'
+
+  get '/services', to: 'welcome#services'
 end
