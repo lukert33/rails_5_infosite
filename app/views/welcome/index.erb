@@ -40,33 +40,43 @@
 <!-- End Hero -->
 
 
+<a name="contact"></a>
 <div class="container-fluid">
-  <a name="contact"></a>
-  <div id="contact-us" class="col-xs-12 col-md-9 form">
-    <h3 class="title-sm">Request a Free Phone Consultation</h3>
-    <form action="https://getsimpleform.com/messages?form_api_token={{ site.simpleform_token }}" method="post">
-      <div class="form-group">
-        <label class="control-label" for="name">Name</label>
-        <input class="form-control" name="name" type="text"  required>
+  <div class="row">
+    <div id="contact-us">
+      <div class="col-xs-12 col-md-6 form">
+        <h3 class="title-sm">Request a Free Phone Consultation</h3>
+        <label style="margin-bottom: 10px;"><em>Or call us at 203-912-7032</em></label>
+        <form action="https://getsimpleform.com/messages?form_api_token=<%= ENV['simpleform_token'] %>" method="post">
+          <div class="form-group">
+            <label class="control-label" for="name">Name</label>
+            <input class="form-control" name="name" type="text"  required>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="phone">Email</label>
+            <input class ="form-control" name="email" type="email"  required>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="phone">Phone</label>
+            <input class ="form-control" name="phone" type="tel" >
+          </div>
+
+
+          <div class="form-group">
+            <label class="control-label" for="comments">Message</label>
+            <textarea class ="form-control" name="comments" ></textarea>
+          </div>
+
+          <input type="submit" class="btn btn-primary btn-lg btn-default" value="Send">
+        </form>
       </div>
 
-      <div class="form-group">
-        <label class="control-label" for="phone">Email</label>
-        <input class ="form-control" name="email" type="email"  required>
+      <div class="col-md-6">
+        <h3 class="title-sm"></h3>
+        <label ><%= FIRM_TITLE %> is a division of D.A. Thomas Construction, founded in 1994. Connecticut license number 12345</label>
       </div>
-
-      <div class="form-group">
-        <label class="control-label" for="phone">Phone</label>
-        <input class ="form-control" name="phone" type="tel" >
-      </div>
-
-
-      <div class="form-group">
-        <label class="control-label" for="comments">Message</label>
-        <textarea class ="form-control" name="comments" ></textarea>
-      </div>
-
-      <input type="submit" class="btn btn-primary btn-lg btn-default" value="Send">
-    </form>
+    </div>
   </div>
 </div>
