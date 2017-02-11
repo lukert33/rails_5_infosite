@@ -52,6 +52,12 @@ h1 {
   font-size: 30px;
 }
 
+.subtitle-md {
+	font-family: $font-family-sans;
+  letter-spacing: .012em;
+  font-size: 24px;
+}
+
 .hero-content {
 	padding: 20px 0;
 }
@@ -76,4 +82,28 @@ header {
 	color: #fff;
   padding: 15px 0;
   margin-top: 40px;
+}
+
+.pull-quote {
+	margin-bottom: 0;
+	&:before, &:after {
+		font-weight: bold;
+		font-style: 28px;
+	}
+	&:before {
+		content: '“ ';
+		color: $color-blue;
+	}
+	&:after {
+		content: '” ';
+		color: $color-blue;
+	}
+}
+.citation {
+	font-family: $font-family-sans;
+  letter-spacing: .013em;
+  font-size: 21px;
+  font-weight: bold;	
+  margin-bottom: 25px;
+  margin-left: 20px;
 }
