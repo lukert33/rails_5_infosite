@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get '/about-us', to: 'welcome#about_us'
 
   get '/services', to: 'welcome#services'
+
+  get "/utility-flyer", to: 'welcome#utility_flyer'
 end

@@ -7,4 +7,7 @@ class WelcomeController < ApplicationController
 
 	def about_us
 	end
+
+	def utility_flyer
+	end
 end

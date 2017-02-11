@@ -7,14 +7,18 @@
   $colorStart: rgba(0,0,0,0);
   $colorEnd: rgba(0,0,0,0.5);
   @include background-image(linear-gradient(to top, $colorStart, $colorEnd), asset_url('kitchen-sink.jpg'));
+  background-position-x: 520px;
 	h1, h2 {
 		color: #fff;
+	}
+	@include media-sm {
+		background-position-x: 0;
 	}
 }
 
 .hero-explanation {
 	background: #fff;
-	margin-top: 160px;
+	margin-top: 10px;
 	padding: 20px 40px;
 	p:last-child {
 		margin-bottom: 0;
@@ -23,6 +27,8 @@
     margin-top: 10px;
     padding: 20px 20px;
 	}
+	@include display(flex);
+	@include align-items(center);
 }
 
 #contact-us {
