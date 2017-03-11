@@ -41,16 +41,16 @@
 
 
 <a name="contact"></a>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div id="contact-us">
       <div class="col-xs-12 col-md-6 form">
         <h3 class="title-sm">Request a Free Phone Consultation</h3>
         <label style="margin-bottom: 10px;"><em>Or call us at 203-912-7032</em></label>
-        <form action="https://getsimpleform.com/messages?form_api_token=<%= ENV['simpleform_token'] %>" method="post">
+        <%= form_tag '/contact-request', remote: true do %>
           <div class="form-group">
             <label class="control-label" for="name">Name</label>
-            <input class="form-control" name="name" type="text"  required>
+            <input class="form-control" name="name" type="text" >
           </div>
 
           <div class="form-group">
@@ -70,7 +70,7 @@
           </div>
 
           <input type="submit" class="btn btn-primary btn-lg btn-default" value="Send">
-        </form>
+        <% end %>
       </div>
 
       <div class="col-md-6">

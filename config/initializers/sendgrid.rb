@@ -1,0 +1,1 @@
+MySendGrid = SendGrid::API.new(api_key: ENV['sendgrid_key'])
