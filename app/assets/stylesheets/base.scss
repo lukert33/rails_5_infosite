@@ -20,7 +20,8 @@ body {
 }
 
 p {
-	font-family: $font-family-serif;
+	font-family: $font-family-sans;
+  font-size: 22px;
 	margin: 0 0 1.4em;
 	line-height: 1.4em;
 }
@@ -29,7 +30,7 @@ a {
 	color: $color-blue;
 	&:hover, &:focus {
 		color: #333;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 

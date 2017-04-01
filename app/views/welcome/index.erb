@@ -6,7 +6,7 @@
           <h1 class="title-lg">Lead Pipe Testing in CT and NY</h1>
       </div>
       <div class="col-md-8">
-          <h2 class="subtitle-lg">Hundreds of thousands of homes in Connecticut, New York, and the Northeast have their drinking water delivered through contaminated lead pipes.</h2>
+          <h2 class="subtitle-lg">Millions of homes in Connecticut, New York, and the Northeast have their drinking water delivered through contaminated lead pipes.</h2>
       </div>
     </div>
   </div>
@@ -16,18 +16,19 @@
       <div class="col-md-10 col-xs-12">
         <div class="hero-explanation">
           <div class="col-md-8">
-            <p>The Robert Wood Johnson Foundation has <a href="http://blogs.harvard.edu/billofhealth/2013/04/01/public-health-protection-under-the-epa-lead-and-copper-rule/" target="_blank">spearheaded research since 2013</a> that has revealed the huge extent of American homes that are not safe from lead contamination in drinking water, including millions of homes in New England. The danger arises when Lead or Galvanized pipes periodically contaminate residents' water. This exposes people to lead levels in drinking water above the EPA's recommended parts per billion.</p> 
+            <p>The Robert Wood Johnson Foundation has <a href="http://blogs.harvard.edu/billofhealth/2013/04/01/public-health-protection-under-the-epa-lead-and-copper-rule/" target="_blank">spearheaded research since 2013</a> that has revealed that millions of American homes are not safe from lead contamination in drinking water, including homes in Connecticut and New York. The danger arises when lead, galvanized, or brass pipes periodically contaminate residents' water. This exposes people to lead levels in drinking water above the EPA's recommended parts per billion.</p> 
 
-            <p>Because this only happens when the pipes are agitated, it is difficult to test for dangerous pipes simply by sampling water.</p>
+            <p>In most cases, contaminated pipes only produce dangerous lead levels <em>some</em> of the time, such as when the pipes are agitated. Passing trucks, snow plows, and nearby road work are common ways for lead particles to break loose from pipes and solder. Water can also become contaminated after sitting for as little as six hours.</p>
 
-            <p>We specialize in testing the service pipes of homes built before 1986, the year when amendments to the <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2509614/">Safe Drinking Water Act</a> prohibited the installation of lead pipes nationwide.</p>
+            <p>We specialize in testing the service pipes of homes built before 1986, the year when amendments to the <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2509614/">Safe Drinking Water Act</a> prohibited the installation of pipes with lead solder nationwide.</p>
 
-            <p>We will test the pipes that run from the street to your home, and the pipes in your home. We will tell you whether your pipes are lead-free by the EPA's current standards, most <a href="https://www.epa.gov/ground-water-and-drinking-water/basic-information-about-lead-drinking-water#regs" target="_blank">recently overhauled in 2011</a>.</p>
+            <p>We will test your private water line, the component of your house's plumbing that runs from the street to your basement, and the pipes in your home. We will tell you whether your pipes contain lead.</p>
 
             <p>Utility companies in the region, such as Aquarion Water Company, have sent flyers <%= link_to "such as this one", utility_flyer_path, target: "_blank" %> to customers recommending they take responsibility for testing the water lines on their property.</p>
           </div>
 
           <div class="col-md-4">
+            <%= image_tag "pipe_corroded.jpg", class: "img-responsive" %>
             <%= image_tag "uc_davis_corroded_water_line.jpg", class: "img-responsive" %>
           </div>
         </div>
@@ -41,16 +42,16 @@
 
 
 <a name="contact"></a>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div id="contact-us">
       <div class="col-xs-12 col-md-6 form">
-        <h3 class="title-sm">Request a Free Phone Consultation</h3>
+        <h3 class="title-sm">Request a Free Consultation</h3>
         <label style="margin-bottom: 10px;"><em>Or call us at 203-912-7032</em></label>
-        <form action="https://getsimpleform.com/messages?form_api_token=<%= ENV['simpleform_token'] %>" method="post">
+        <%= form_tag '/contact-request', remote: true do %>
           <div class="form-group">
             <label class="control-label" for="name">Name</label>
-            <input class="form-control" name="name" type="text"  required>
+            <input class="form-control" name="name" type="text" >
           </div>
 
           <div class="form-group">
@@ -70,12 +71,12 @@
           </div>
 
           <input type="submit" class="btn btn-primary btn-lg btn-default" value="Send">
-        </form>
+        <% end %>
       </div>
 
       <div class="col-md-6">
         <h3 class="title-sm"></h3>
-        <label ><%= FIRM_TITLE %> is a division of D.A. Thomas Construction, founded in 1994. Connecticut license number 12345</label>
+        <label ><%= FIRM_TITLE %> is a division of D.A. Thomas Construction, founded in 1994. Connecticut license number 547366</label>
       </div>
     </div>
   </div>

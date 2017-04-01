@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get '/services', to: 'welcome#services'
 
   get "/utility-flyer", to: 'welcome#utility_flyer'
+
+  post "/contact-request", to: 'mailings#contact_request', as: 'contact_request'
 end
