@@ -30,7 +30,7 @@ a {
 	color: $color-blue;
 	&:hover, &:focus {
 		color: #333;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 
