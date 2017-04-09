@@ -4,6 +4,7 @@ class ContactRequestMailer < ApplicationMailer
     @user_email = args[:user_email]
     @body_lines = args[:body_lines]
     mail(
+      from: @user_email,
       subject: args[:subject]
     )
   end
