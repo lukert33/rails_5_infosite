@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @user_email %> Submitted a Contact Request</h1>
+    <% @body_lines.each_pair do |fieldname, line| %>
+      <p style="font-size: 24px;"><strong><%= fieldname.to_s.humanize.capitalize %></strong>: <%= line %></p>
+    <% end %>
+  </body>
+</html>

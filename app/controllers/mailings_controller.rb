@@ -1,32 +1,25 @@
 class MailingsController < ApplicationController
 	def contact_request
-		message_em = "#{params['email']} just asked to be contacted from the lead site at #{Time.now.strftime('%A, %d %b %Y %l:%M %p')}"
+		request_time = "#{Time.now.strftime('%A, %d %b %Y %l:%M %p')}"
 
-		body_lines = ["name", "phone", "comments"].map do |info_type|
+		elements = {request_time: request_time}
+		["name", "phone", "email", "comments"].each do |info_type|
 			if params[info_type]
-				"They provided the #{info_type}: #{params[info_type]}"
-			else 
-				""
+				elements[info_type.to_sym] = params[info_type]
 			end
 		end
+		print elements
 
-		body = [message_em, body_lines].flatten.join("\n\n")
+		subject = "Lead Testing Contact Request from #{params['email']}"
+		body_lines = elements
+		mail_attrs = {
+			body_lines: body_lines,
+			to: "lukert33@gmail.com",
+			subject: subject,
+			user_email: params["email"]
+		}
 
-		mail = Mail.new
-
-		mail.from = "contact@leadpipetesting.com"
-		mail.to = 'lukert33@gmail.com'
-
-		mail.subject = "Lead Testing Contact Request from #{params['email']}"
-		mail.body = body
-
-		sg = SendGrid::API.new(api_key: ENV['sendgrid_key'])
-		begin
-			pp mail.to_json
-	    response = sg.client.mail._("send").post(request_body: mail.to_json)
-		rescue Exception => e
-	    puts e.message
-		end
+		ContactRequestMailer.info_request(mail_attrs).deliver
 
 		respond_to do |format|
 			format.js { render :layout => false }
