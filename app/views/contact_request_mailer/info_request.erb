@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @user_email.split('@').join(' [at] ') %> Submitted a Contact Request</h1>
+    <% @body_lines.each_pair do |fieldname, line| %>
+      <% if fieldname.to_s == "email" %>
+        <p style="font-size: 24px;"><strong>Email:</strong> <%= @user_email.split('@').join(' [at] ') %></p>
+      <% else %>
+        <p style="font-size: 24px;"><strong><%= fieldname.to_s.humanize.capitalize %></strong>: <%= line %></p>
+      <% end %>
+    <% end %>
+  </body>
+</html>
