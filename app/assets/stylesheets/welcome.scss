@@ -25,7 +25,8 @@
 	}
 	@include media-sm {
     margin-top: 10px;
-    padding: 20px 20px;
+    padding: 10px 0;
+    @include flex-direction(column);
 	}
 	@include display(flex);
 	@include align-items(center);
@@ -35,4 +36,9 @@
 	border-top: 1px solid rgba(#333, 0.3);
   padding-top: 10px;
   margin-top: 40px;
+  .btn-lg {
+    width: 80%;
+    display: block;
+    margin: 0 auto 20px;
+  }
 }

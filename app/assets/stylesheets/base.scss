@@ -83,6 +83,13 @@ header {
 	color: #fff;
   padding: 15px 0;
   margin-top: 40px;
+  a {
+    color: #fff;
+    &:hover, &:focus {
+      color: #fff;
+      text-decoration: underline;
+    }  
+  }
 }
 
 .pull-quote {
