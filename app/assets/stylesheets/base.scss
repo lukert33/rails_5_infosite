@@ -45,6 +45,9 @@ h1 {
 .title-lg {
 	font-size: 72px;
 	font-weight: 700;
+	@include media-sm {
+		font-size: 36px;
+	}
 }
 
 .subtitle-lg {
@@ -67,6 +70,9 @@ h1 {
 	font-weight: 700;
 	margin: 15px 0;
 	font-size: 32px;
+	@include media-sm {
+		font-size: 28px;
+	}
 }
 
 .btn-primary {
