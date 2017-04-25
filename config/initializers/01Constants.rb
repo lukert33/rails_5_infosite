@@ -1,5 +1,5 @@
 SITE_TITLE = "Lead and Galvanized Pipe Inspection"
-FIRM_TITLE = "Residential Lead Pipe Testing, LLC"
+FIRM_TITLE = "Lead Pipe Testing, LLC"
 
 SITE_HOSTS = {
   "development" => "localhost:3000",
