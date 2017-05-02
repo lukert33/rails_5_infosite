@@ -42,3 +42,15 @@
     margin: 0 auto 20px;
   }
 }
+
+.control-label {
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 36px;
+  input.form-control {
+    font-size: 18px;
+    height: 28px;
+  }
+}

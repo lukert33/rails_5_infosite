@@ -32,7 +32,14 @@ $nav-content-height-sm: 44px;
 }
 
 .logo-title {
-  line-height: 1em;
+  line-height: 30px;
+}
+
+.logo-title-lg {
+  font-size: 32px;
+  @include media-sm {
+    font-size: 18px;
+  }
 }
 
 .nav-link-list {

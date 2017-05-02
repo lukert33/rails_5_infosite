@@ -12,7 +12,10 @@
 			<%= link_to root_path, class: "navbar-homelink" do  %>
 			<!-- <a class="navbar-brand scroll" href="/"> -->
 				<%= image_tag "faucet_logo.png", alt: SITE_TITLE, class: "nav-logo-img img-responsive" %>
-				<span class="logo-title"><%= SITE_TITLE %></span>
+				<div>
+					<div class="logo-title logo-title-lg"><%= FIRM_TITLE %></div>
+					<div class="logo-title hidden-sm hidden-xs"><%= SITE_TITLE %></div>
+				</div>
 			<% end %>
 		</div>
 
