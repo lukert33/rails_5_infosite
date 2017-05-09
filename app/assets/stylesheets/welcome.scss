@@ -54,3 +54,16 @@
     height: 28px;
   }
 }
+
+#welcome-video-wrap {
+  margin: 20px 0 0;
+  padding-top: 20px;
+  background: #fff;
+  iframe {
+    min-height: 240px;
+    height: 46vh;
+    @include media-md-lg {
+      height: 610px;
+    }
+  }
+}
